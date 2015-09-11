@@ -1,0 +1,22 @@
+{
+  "name": "startupweekend",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/treygeorge/startup-weekend.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/treygeorge/startup-weekend/issues"
+  },
+  "devDependencies": {
+    "gulp": "~3.9.0",
+    "gulp-connect": "~2.2.0"
+  }
+}

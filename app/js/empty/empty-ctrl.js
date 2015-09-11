@@ -1,0 +1,1 @@
+angular.module('sw').controller('EmptyCtrl', function() {});
