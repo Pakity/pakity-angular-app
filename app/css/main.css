@@ -3,9 +3,23 @@
 	background: url(../images/background3.jpg) center center fixed no-repeat;
     background-color: #294B70;
     background-size: cover;
+
 	height: 650px;
 }
 .site-banner {
 	height: 300px;
+}
 
+input.smallInput {
+    width: 10%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+a.dropdown-button.btn.formClearDropdown {
+    box-shadow: 0 0 0 0;
+    background-color: #fff;
+    border-bottom: 1px solid #9e9e9e;
+    color: #9e9e9e;
 }
