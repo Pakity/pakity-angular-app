@@ -10,6 +10,11 @@ angular.module('sw').config(function ($stateProvider, $urlRouterProvider) {
       url: '/empty',
       templateUrl: 'js/empty/empty.html',
       controller: 'EmptyCtrl'
+    })
+    .state('start', {
+      url: '/start',
+      templateUrl: 'js/start/start.html',
+      controller: 'StartCtrl'
     });
 
   $urlRouterProvider.otherwise('/');
