@@ -1,7 +1,7 @@
 <h1 class="header">{{pack.brand.name}} - {{pack.name}}</h1>
 <div class="row">
   <div class="col m3">
-    <img src="{{pack.url_img}}" class="" />
+    <img src="{{pack.url_img}}" class=""/>
   </div>
   <div class="col offset-m1 m8">
     <div class="row">
@@ -10,6 +10,27 @@
       <div>Price: {{pack.price}}</div>
       <div>Gender: {{pack.gender.name}}</div>
       <div>Url: <a href="{{pack.url}}" target="_blank">View Pack</a></div>
+    </div>
+    <div class="row">
+
+      <ul class="collection" ng-repeat="item in packItems">
+        <li class="collection-item row">
+          <input ng-change="updateTotals(item)" ng-model="item.checked" id="{{item.id}}" type="checkbox" checked="checked"/>
+          <label for="{{item.id}}" class="col m12">
+              <span style="padding-left: 25px">{{item.name}}</span>
+              <span class="secondary-content">
+                Price: {{item.price | currency: '$'}} Weight: {{item.weight}}oz.
+              </span>
+          </label>
+          <span ng-hide="item.checked">
+            <a class="waves-effect waves-light btn smaller-btn">Alreay have it</a>
+            <a class="waves-effect waves-light btn smaller-btn">Don't want it</a>
+          </span>
+        </li>
+
+      </ul>
+      <div>Total: {{totalCost | currency:"$"}}</div>
+      <div>Items Weight: {{totalWeight | number:2}}oz.</div>
     </div>
   </div>
 </div>
