@@ -12,18 +12,23 @@
       <input class="smallInput" type="text"/>
     </p>
     <p class="col s12 center flow-text">
-      Starting on <input type="date" class="datepicker smallInput" ng-model="configuration.startDate"/>
-      and ending on <input type="date" class="datepicker smallInput" ng-model="configuration.endDate"/>.
+      I am and looking to travel for  <input class="smallInput" type="text"/> days around <a class='dropdown-button btn formClearDropdown' href='#' data-activates='dropdown-season'>{{season}}</a>.
     </p>
     <p class="col s12 center flow-text">
-      I am a <a class='dropdown-button btn formClearDropdown' href='#' data-activates='dropdown1'>{{gender}}</a>
-      with a waist size of <input class="smallInput" type="text"/> and a torso size of <input class="smallInput" type="text"/>
+      I am a <a class='dropdown-button btn formClearDropdown' href='#' data-activates='dropdown-gender'>{{gender}}</a>
+      with a waist size of <input class="smallInput" type="text"/>in. and a torso size of <input class="smallInput" type="text"/>in.
     </p>
-    <ul id='dropdown1' class='dropdown-content'>
+    <ul id='dropdown-season' class='dropdown-content'>
+      <li><a ng-click="seasonToggleText('SPRING')">Spring</a></li>
+      <li><a ng-click="seasonToggleText('SUMMER') ">Summer</a></li>
+      <li><a ng-click="seasonToggleText('FALL') ">Fall</a></li>
+      <li><a ng-click="seasonToggleText('WINTER') ">Winter</a></li>
+    </ul>
+    <ul id='dropdown-gender' class='dropdown-content'>
       <li><a id="male" ng-click="genderToggleText('MALE')">Male</a></li>
       <li><a id="female" ng-click="genderToggleText('FEMALE') ">Female</a></li>
     </ul>
-  <button ng-click="nextStep()" class="btn center">OK</button>
+  <button ng-click="nextStep()" class="btn center">GO!</button>
 </div>
 
 <script>

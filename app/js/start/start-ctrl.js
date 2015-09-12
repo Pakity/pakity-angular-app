@@ -15,5 +15,9 @@ angular.module('sw').controller('StartCtrl', function($scope, $http) {
     $scope.gender = gender;
   };
 
+  $scope.seasonToggleText = function(season){
+    $scope.season = season;
+  }
+
   $scope.init();
 });
