@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp connect",
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "postinstall": "bower install"
   },
   "engines": {
     "node": "0.10.x",
@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/treygeorge/startup-weekend/issues"
   },
-  "devDependencies": {
+  "dependencies": {
     "gulp": "~3.9.0",
     "gulp-connect": "~2.2.0",
     "bower": "~1.5.2"
