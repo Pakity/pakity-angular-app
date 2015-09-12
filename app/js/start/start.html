@@ -9,16 +9,20 @@
   <div class="row">
     <p class="col s12 center flow-text">
       I am looking to backpack around the zip code
-      <input class="smallInput" type="text" ng-model="configuration.zip"/>
+      <input class="smallInput" type="text"/>
     </p>
     <p class="col s12 center flow-text">
-      Starting on<input type="date" class="datepicker smallInput" ng-model="configuration.startDate"/>
-      and ending on<input type="date" class="datepicker smallInput" ng-model="configuration.endDate"/>.
+      Starting on <input type="date" class="datepicker smallInput" ng-model="configuration.startDate"/>
+      and ending on <input type="date" class="datepicker smallInput" ng-model="configuration.endDate"/>.
     </p>
     <p class="col s12 center flow-text">
-      I am a <input class="smallInput" type="text" ng-model="configuration.zip"/>
-      with a waist size of <input class="smallInput" type="text" ng-model="configuration.zip"/> and a torso size of <input class="smallInput" type="text" ng-model="configuration.zip"/>
+      I am a <a class='dropdown-button btn formClearDropdown' href='#' data-activates='dropdown1'>{{gender}}</a>
+      with a waist size of <input class="smallInput" type="text"/> and a torso size of <input class="smallInput" type="text"/>
     </p>
+    <ul id='dropdown1' class='dropdown-content'>
+      <li><a id="male" ng-click="genderToggleText('MALE')">Male</a></li>
+      <li><a id="female" ng-click="genderToggleText('FEMALE') ">Female</a></li>
+    </ul>
   <button ng-click="nextStep()" class="btn center">OK</button>
 </div>
 

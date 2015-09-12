@@ -3,15 +3,16 @@ angular.module('sw').controller('StartCtrl', function($scope, $http) {
 
 
   $scope.init = function() {
+    $scope.gender = "";
     $scope.configuration = {};
-    $scope.mainOptions = [
-      {id: 1, name: 'Backpack'},
-      {id: 2, name: 'Camp'}
-    ];
   };
 
   $scope.nextStep = function() {
     console.log('config', $scope.configuration);
+  };
+
+  $scope.genderToggleText = function(gender){
+    $scope.gender = gender;
   };
 
   $scope.init();
