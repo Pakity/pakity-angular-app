@@ -14,7 +14,7 @@
     <div class="row">
 
       <ul class="collection" ng-repeat="item in packItems">
-        <li class="collection-item row">
+        <li class="collection-item row" ng-class="item.listStatus">
           <input ng-change="updateTotals(item)" ng-model="item.checked" id="{{item.id}}" type="checkbox" checked="checked"/>
           <label for="{{item.id}}" class="col m12">
               <span style="padding-left: 25px">{{item.name}}</span>
@@ -22,9 +22,9 @@
                 Price: {{item.price | currency: '$'}} Weight: {{item.weight}}oz.
               </span>
           </label>
-          <span ng-hide="item.checked">
-            <a class="waves-effect waves-light btn smaller-btn">Alreay have it</a>
-            <a class="waves-effect waves-light btn smaller-btn">Don't want it</a>
+          <span ng-hide="item.checked || item.dontWantBtnClick">
+            <a ng-click="alreadyHaveBtn(item)"class="waves-effect waves-light btn smaller-btn">Alreay have it</a>
+            <a ng-click="dontWantBtn(item)" ng-hide="item.disableDontWantBtn" class="waves-effect waves-light btn smaller-btn">Don't want it</a>
           </span>
         </li>
 
