@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp connect",
-    "postinstall": "bower install"
+    "postinstall": "./node_modules/bower/bin/bower install"
   },
   "engines": {
     "node": "0.10.x",
