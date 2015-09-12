@@ -20,7 +20,7 @@
         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=2115791958561745";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-    
+
     window.fbAsyncInit = function() {
         FB.init({
             appId: '2115791958561745',
@@ -30,59 +30,53 @@
     };
     </script>
 </head>
+
 <body ng-app="sw">
-  
 
-  <ui-view></ui-view>
-
-  <footer class="page-footer orange">
-    <!--<div class="container">-->
-      <!--<div class="row">-->
+    <ui-view></ui-view>
+    <footer class="page-footer orange">
+        <!--<div class="container">-->
+        <!--<div class="row">-->
         <!--<div class="col l6 s12">-->
-          <!--<h5 class="white-text">Company Bio</h5>-->
-          <!--<p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>-->
-
-
+        <!--<h5 class="white-text">Company Bio</h5>-->
+        <!--<p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>-->
         <!--</div>-->
         <!--<div class="col l3 s12">-->
-          <!--<h5 class="white-text">Settings</h5>-->
-          <!--<ul>-->
-            <!--<li><a class="white-text" href="#!">Link 1</a></li>-->
-            <!--<li><a class="white-text" href="#!">Link 2</a></li>-->
-            <!--<li><a class="white-text" href="#!">Link 3</a></li>-->
-            <!--<li><a class="white-text" href="#!">Link 4</a></li>-->
-          <!--</ul>-->
+        <!--<h5 class="white-text">Settings</h5>-->
+        <!--<ul>-->
+        <!--<li><a class="white-text" href="#!">Link 1</a></li>-->
+        <!--<li><a class="white-text" href="#!">Link 2</a></li>-->
+        <!--<li><a class="white-text" href="#!">Link 3</a></li>-->
+        <!--<li><a class="white-text" href="#!">Link 4</a></li>-->
+        <!--</ul>-->
         <!--</div>-->
         <!--<div class="col l3 s12">-->
-          <!--<h5 class="white-text">Connect</h5>-->
-          <!--<ul>-->
-            <!--<li><a class="white-text" href="#!">Link 1</a></li>-->
-            <!--<li><a class="white-text" href="#!">Link 2</a></li>-->
-            <!--<li><a class="white-text" href="#!">Link 3</a></li>-->
-            <!--<li><a class="white-text" href="#!">Link 4</a></li>-->
-          <!--</ul>-->
+        <!--<h5 class="white-text">Connect</h5>-->
+        <!--<ul>-->
+        <!--<li><a class="white-text" href="#!">Link 1</a></li>-->
+        <!--<li><a class="white-text" href="#!">Link 2</a></li>-->
+        <!--<li><a class="white-text" href="#!">Link 3</a></li>-->
+        <!--<li><a class="white-text" href="#!">Link 4</a></li>-->
+        <!--</ul>-->
         <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
-    </div>
-  </footer>
+        <!--</div>-->
+        <!--</div>-->
+        <div class="footer-copyright">
+            <div class="container">
+                Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+            </div>
+        </div>
+    </footer>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/materialize/dist/js/materialize.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../bower_components/ng-lodash/build/ng-lodash.js"></script>
+    <script src="../app/app.js"></script>
+    <script src="../app/routes.js"></script>
+    <script src="../app/js/home/home-ctrl.js"></script>
+    <script src="../app/js/start/start-ctrl.js"></script>
+    <script src="../app/js/contact/contact-ctrl.js"></script>
+</body>
 
-
-  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="../bower_components/materialize/dist/js/materialize.js"></script>
-
-  <script src="../bower_components/angular/angular.js"></script>
-  <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-  <script src="../bower_components/ng-lodash/build/ng-lodash.js"></script>
-  <script src="../app/app.js"></script>
-  <script src="../app/routes.js"></script>
-  <script src="../app/js/home/home-ctrl.js"></script>
-  <script src="../app/js/start/start-ctrl.js"></script>
-  <script src="../app/js/contact/contact-ctrl.js"></script>
-
-  </body>
 </html>

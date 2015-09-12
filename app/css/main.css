@@ -1,11 +1,27 @@
 .index-banner.banner-home {
 
-	background: url(../images/background3.jpg) center center fixed no-repeat;
+	background: url(../images/background1.jpg) center center fixed no-repeat;
     background-color: #294B70;
     background-size: cover;
-	height: 650px;
+	height: 800px;
 }
 .site-banner {
 	height: 300px;
 
+}
+.second-banner.banner-home {
+
+	background: url(../images/background2.jpg) center center fixed no-repeat;
+    background-color: #294B70;
+    background-size: cover;
+	height: 300px;
+}
+.section.second  {
+	padding-bottom: 150px;
+}
+.section.third  {
+	padding-bottom: 150px;
+}
+.section.fourth  {
+	padding-bottom: 150px;
 }
