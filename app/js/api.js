@@ -1,4 +1,4 @@
-angular.module('sw').factory('API', function(lodash) {
+angular.module('sw').factory('API', function(lodash, $http) {
 
   function getPacks() {
     return [
@@ -23,8 +23,13 @@ angular.module('sw').factory('API', function(lodash) {
     });
   }
 
+  function postCustomerInfo(data) {
+    return $http.post('www.google.com', data);
+  }
+
   return {
     getPacks: getPacks,
-    getPack: getPack
+    getPack: getPack,
+    postCustomerInfo: postCustomerInfo
   };
 });

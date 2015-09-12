@@ -1,4 +1,4 @@
-angular.module('sw').controller('StartCtrl', function($scope, $http) {
+angular.module('sw').controller('StartCtrl', function($scope, API, $state) {
   var controller = this;
 
 
@@ -20,11 +20,17 @@ angular.module('sw').controller('StartCtrl', function($scope, $http) {
   $scope.seasonToggleText = function(season){
     $scope.season = season;
     $scope.customerInfo.season = season;
-  }
+  };
 
   $scope.testing = function(){
     console.log($scope.customerInfo);
-  }
+    API.postCustomerInfo($scope.customerInfo)
+      .then(function(response) {
+        console.log(response.data);
+        $state.go('packs');
+      });
+
+  };
 
   $scope.init();
 });
