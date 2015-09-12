@@ -9,14 +9,14 @@
   <div class="row">
     <p class="col s12 center flow-text">
       I am looking to backpack around the zip code
-      <input class="smallInput" type="text"/>
+      <input ng-model="customerInfo.zipcode" class="smallInput" type="text"/>
     </p>
     <p class="col s12 center flow-text">
-      I am and looking to travel for  <input class="smallInput" type="text"/> days around <a class='dropdown-button btn formClearDropdown' href='#' data-activates='dropdown-season'>{{season}}</a>.
+      I am and looking to travel for  <input ng-model="customerInfo.days" class="smallInput" type="text"/> days around <a class='dropdown-button btn formClearDropdown' href='#' data-activates='dropdown-season'>{{season}}</a>.
     </p>
     <p class="col s12 center flow-text">
       I am a <a class='dropdown-button btn formClearDropdown' href='#' data-activates='dropdown-gender'>{{gender}}</a>
-      with a waist size of <input class="smallInput" type="text"/>in. and a torso size of <input class="smallInput" type="text"/>in.
+      with a waist size of <input ng-model="customerInfo.waistSize" class="smallInput" type="text"/>in. and a torso size of <input ng-model="customerInfo.torsoSize" class="smallInput" type="text"/>in.
     </p>
     <ul id='dropdown-season' class='dropdown-content'>
       <li><a ng-click="seasonToggleText('SPRING')">Spring</a></li>
@@ -28,7 +28,7 @@
       <li><a id="male" ng-click="genderToggleText('MALE')">Male</a></li>
       <li><a id="female" ng-click="genderToggleText('FEMALE') ">Female</a></li>
     </ul>
-  <button ng-click="nextStep()" class="btn center">GO!</button>
+  <button ng-click="testing()" class="btn center">GO!</button>
 </div>
 
 <script>

@@ -4,7 +4,8 @@ angular.module('sw').controller('StartCtrl', function($scope, $http) {
 
   $scope.init = function() {
     $scope.gender = "";
-    $scope.configuration = {};
+    $scope.season = "";
+    $scope.customerInfo = {};
   };
 
   $scope.nextStep = function() {
@@ -13,10 +14,16 @@ angular.module('sw').controller('StartCtrl', function($scope, $http) {
 
   $scope.genderToggleText = function(gender){
     $scope.gender = gender;
+    $scope.customerInfo.gender = gender;
   };
 
   $scope.seasonToggleText = function(season){
     $scope.season = season;
+    $scope.customerInfo.season = season;
+  }
+
+  $scope.testing = function(){
+    console.log($scope.customerInfo);
   }
 
   $scope.init();
