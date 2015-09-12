@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Columbia, MO - Pakity</title>
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="../bower_components/materialize/dist/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="../app/css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Columbia, MO - Pakity</title>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../bower_components/materialize/dist/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="../app/css/main.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <!-- Facebook Integration -->
+    <div id="fb-root"></div>
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=2115791958561745";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId: '2115791958561745',
+            xfbml: true,
+            version: 'v2.4'
+        });
+    };
+    </script>
 </head>
 <body ng-app="sw">
   <nav class="light-blue lighten-1" role="navigation">
@@ -65,6 +85,4 @@
   <script src="../app/routes.js"></script>
   <script src="../app/js/home/home-ctrl.js"></script>
   <script src="../app/js/start/start-ctrl.js"></script>
-
-  </body>
 </html>
