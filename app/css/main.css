@@ -9,6 +9,11 @@
     height: 400px;
 }
 
+.site-logo {
+    height: 75px;
+    padding-left: 10px;
+}
+
 .second-banner.banner-home {
     background: url(../images/background1.jpg) center center fixed no-repeat;
     background-color: #294B70;
@@ -23,18 +28,9 @@
     height: 400px;
 }
 
-.section.second {
-    padding-top: 100px;
-    padding-bottom: 150px;
-}
-
-.section.third {
-    padding-bottom: 150px;
-}
-
-.section.fourth {
-    padding-bottom: 150px;
-}
+.bottom-padding {
+ 	padding-bottom: 150px;
+ }
 
 input.smallInput {
     width: 10%;
