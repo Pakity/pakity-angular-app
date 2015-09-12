@@ -32,7 +32,13 @@
 </head>
 
 <body ng-app="sw">
+    <nav ng-show="!$state.includes('home')" class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" ui-sref="home" class="brand-logo">Pakity</a>
+        </div>
+    </nav>
+
     <ui-view></ui-view>
+    
     <footer class="page-footer orange">
         <!--<div class="container">-->
         <!--<div class="row">-->
