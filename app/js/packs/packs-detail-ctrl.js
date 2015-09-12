@@ -6,7 +6,9 @@ angular.module('sw').controller('PacksDetailCtrl', function($scope, $stateParams
     console.log('packid', packId);
     $scope.pack = API.getPack(packId);
     console.log('selected pack', $scope.pack);
+    $scope.checkboxButtonToggle = true;
   };
 
   $scope.init();
+
 });
