@@ -5,11 +5,19 @@
   </div>
 
 </div>
-<div class="row">
-  <div class="col6 offset-s6">
-    <button>Backpacking</button>
-  </div>
-  <div class="col6 offset-s6">
-    <button>Camping</button>
-  </div>
+<div class="row" ng-show="currentStep == 1;">
+  <p>I am looking to
+      <!-- Dropdown Trigger -->
+    <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown1'>Drop Me!</a>
+
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content'>
+      <li><a href="#!">Backpack</a></li>
+      <li><a href="#!">Camp</a></li>
+    </ul>
+
+    around the zip code
+    <input type="text" />
+    starting <input type="date" /> and ending <input type="date" />.
+  </p>
 </div>
