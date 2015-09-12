@@ -2,22 +2,23 @@
   <div class="row">
 
     <div class="col s10">
-      <h2>What are you doing?</h2>
+      <h2>Tell Us About Your Trip</h2>
     </div>
 
   </div>
   <div class="row">
-    <p class="col s12 center">
+    <p class="col s12 center flow-text">
       I am looking to backpack around the zip code
       <input class="smallInput" type="text" ng-model="configuration.zip"/>
     </p>
-  </div>
-  <div class="row">
-    <p class="col s12 center">
-      starting <input type="date" class="datepicker smallInput" ng-model="configuration.startDate"/>
-      and ending <input type="date" class="datepicker smallInput" ng-model="configuration.endDate"/>.
+    <p class="col s12 center flow-text">
+      Starting on<input type="date" class="datepicker smallInput" ng-model="configuration.startDate"/>
+      and ending on<input type="date" class="datepicker smallInput" ng-model="configuration.endDate"/>.
     </p>
-  </div>
+    <p class="col s12 center flow-text">
+      I am a <input class="smallInput" type="text" ng-model="configuration.zip"/>
+      with a waist size of <input class="smallInput" type="text" ng-model="configuration.zip"/> and a torso size of <input class="smallInput" type="text" ng-model="configuration.zip"/>
+    </p>
   <button ng-click="nextStep()" class="btn center">OK</button>
 </div>
 
