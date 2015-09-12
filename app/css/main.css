@@ -47,7 +47,7 @@ a.dropdown-button.btn.formClearDropdown {
 }
 
 .smaller-btn {
-    background-color: #29b6f6;
+    background-color: #424242;
     width: 27%;
     float: right;
     height: 28px;
@@ -56,5 +56,21 @@ a.dropdown-button.btn.formClearDropdown {
     padding: 0px;
 }
 .smaller-btn:hover {
-    background-color: #58C4F5;
+    background-color: #757575;
 }
+
+.strike:before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 3px;
+  background: #9e9e9e;
+  content: "";
+  width: 100%;
+  display: block;
+}
+.alreadyHave {
+    background-color: #a5d6a7 !important;
+}
+
+

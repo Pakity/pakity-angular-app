@@ -20,6 +20,9 @@ angular.module('sw').controller('PacksDetailCtrl', function($scope, $stateParams
   $scope.updateTotals = function(item) {
     console.log('item', item);
     if(item.checked) {
+      item.listStatus = ""
+      item.disableDontWantBtn = false;
+      item.dontWantBtnClick = false;
       $scope.totalCost += item.price;
       $scope.totalWeight += item.weight;
     }
@@ -50,7 +53,16 @@ angular.module('sw').controller('PacksDetailCtrl', function($scope, $stateParams
     return total;
   };
 
+  $scope.alreadyHaveBtn = function(item){
+    item.listStatus = "alreadyHave";
+    item.disableDontWantBtn = true;
+  };
 
+  $scope.dontWantBtn = function(item){
+    item.listStatus = "strike";
+    item.disableDontWantBtn = true;
+    item.dontWantBtnClick = true;
+  };
 
   $scope.init();
 
