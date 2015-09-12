@@ -1,6 +1,10 @@
 angular.module('sw', ['ngLodash', 'ui.router'])
     .run(function($rootScope, $state) {
         $rootScope.$state = $state;
+        $rootScope.urls = {
+            pinterestUrl: "https://www.pinterest.com/pakitybackpacks/",
+            facebookUrl: "https://www.facebook.com/pakitybackpacking"
+        };
     });
 $(document).ready(function() {
     $('.parallax').parallax();
