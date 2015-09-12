@@ -59,6 +59,19 @@ angular.module('sw').factory('API', function(lodash, $http, $q) {
         return pack.id == packId;
       });
     },
-    postCustomerInfo: postCustomerInfo
+    postCustomerInfo: postCustomerInfo,
+    getPackItems: function(packId) {
+      var deferred = $q.defer();
+      var items = [
+        {id: 1, name: 'Socks', weight: 10, price: 10.12},
+        {id: 2, name: 'Shirts', weight: 22, price: 15.11},
+        {id: 3, name: 'Flashlight', weight: 30, price: 22.45},
+        {id: 4, name: 'Notebook', weight: 5, price: 5.00}
+      ];
+
+      deferred.resolve(items);
+
+      return deferred.promise;
+    }
   };
 });
