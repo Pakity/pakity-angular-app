@@ -20,6 +20,16 @@ angular.module('sw').config(function ($stateProvider, $urlRouterProvider) {
       url: '/start',
       templateUrl: '/app/js/start/start.html',
       controller: 'StartCtrl'
+    })
+    .state('packs', {
+      url: '/packs',
+      templateUrl: '/app/js/packs/packs.html',
+      controller: 'PacksCtrl'
+    })
+    .state('packs.detail', {
+      url: '/:packId',
+      templateUrl: '/app/js/packs/detail.html',
+      controller: 'PacksDetailCtrl'
     });
 
   $urlRouterProvider.otherwise('/');
