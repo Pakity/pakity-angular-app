@@ -11,6 +11,11 @@ angular.module('sw').config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: '/app/js/empty/empty.html',
       controller: 'EmptyCtrl'
     })
+    .state('contact', {
+      url: '/contact',
+      templateUrl: '/app/js/contact/contact.html',
+      controller: 'ContactCtrl'
+    })
     .state('start', {
       url: '/start',
       templateUrl: '/app/js/start/start.html',
