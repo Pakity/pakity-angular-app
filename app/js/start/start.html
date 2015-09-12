@@ -5,19 +5,26 @@
   </div>
 
 </div>
-<div class="row" ng-show="currentStep == 1;">
-  <p>I am looking to
-      <!-- Dropdown Trigger -->
-    <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown1'>Drop Me!</a>
-
-    <!-- Dropdown Structure -->
-    <ul id='dropdown1' class='dropdown-content'>
-      <li><a href="#!">Backpack</a></li>
-      <li><a href="#!">Camp</a></li>
-    </ul>
-
+<div class="row">
+  <p>I am looking to backpack
     around the zip code
     <input type="text" />
-    starting <input type="date" /> and ending <input type="date" />.
+    starting <input type="date" class="datepicker"/> and ending <input type="date" class="datepicker"/>.
   </p>
 </div>
+
+<script>
+  $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrain_width: false, // Does not change width of dropdown to that of the activator
+      gutter: 0, // Spacing from edge
+      belowOrigin: false // Displays dropdown below the button
+    }
+  );
+
+   $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
+  });
+</script>

@@ -3,11 +3,10 @@ angular.module('sw').controller('StartCtrl', function($scope, $http) {
 
 
   $scope.init = function() {
-    $scope.currentStep = 1;
-  };
-
-  $scope.nextStep = function () {
-    $scope.currentStep++;
+    $scope.mainOptions = [
+      {id: 1, name: 'Backpack'},
+      {id: 2, name: 'Camp'}
+    ];
   };
 
   $scope.init();
