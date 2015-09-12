@@ -1,4 +1,4 @@
-angular.module('sw').controller('StartCtrl', function($scope, API, $state) {
+angular.module('sw').controller('StartCtrl', function($rootScope, $scope, API, $state) {
   var controller = this;
 
 
@@ -24,12 +24,8 @@ angular.module('sw').controller('StartCtrl', function($scope, API, $state) {
 
   $scope.testing = function(){
     console.log($scope.customerInfo);
-    API.postCustomerInfo($scope.customerInfo)
-      .then(function(response) {
-        console.log(response.data);
-        $state.go('packs');
-      });
-
+    $rootScope.customerInfo = $scope.customerInfo;
+    $state.go('packs');
   };
 
   $scope.init();

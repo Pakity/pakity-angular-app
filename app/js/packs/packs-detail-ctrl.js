@@ -5,6 +5,7 @@ angular.module('sw').controller('PacksDetailCtrl', function($scope, $stateParams
     var packId = $stateParams.packId;
     console.log('packid', packId);
     $scope.pack = API.getPack(packId);
+    console.log('selected pack', $scope.pack);
   };
 
   $scope.init();
