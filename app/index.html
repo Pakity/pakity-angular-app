@@ -31,7 +31,7 @@
     </script>
 </head>
 <body ng-app="sw">
-  <nav class="light-blue lighten-1" role="navigation">
+  <nav ng-show="!$state.includes('home')" class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" ui-sref="home" class="brand-logo">Pakity</a>
     </div>
   </nav>
@@ -86,6 +86,9 @@
   <script src="../app/js/home/home-ctrl.js"></script>
   <script src="../app/js/start/start-ctrl.js"></script>
   <script src="../app/js/contact/contact-ctrl.js"></script>
+  <script src="../app/js/packs/packs-ctrl.js"></script>
+  <script src="../app/js/packs/packs-detail-ctrl.js"></script>
+  <script src="../app/js/api.js"></script>
 
   </body>
 </html>
