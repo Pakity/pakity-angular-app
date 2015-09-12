@@ -9,9 +9,13 @@
   <div class="row">
     <p class="col s12 center">
       I am looking to backpack around the zip code
-      <input type="text" ng-model="configuration.zip"/>
-      starting <input type="date" class="datepicker" ng-model="configuration.startDate"/>
-      and ending <input type="date" class="datepicker" ng-model="configuration.endDate"/>.
+      <input class="smallInput" type="text" ng-model="configuration.zip"/>
+    </p>
+  </div>
+  <div class="row">
+    <p class="col s12 center">
+      starting <input type="date" class="datepicker smallInput" ng-model="configuration.startDate"/>
+      and ending <input type="date" class="datepicker smallInput" ng-model="configuration.endDate"/>.
     </p>
   </div>
   <button ng-click="nextStep()" class="btn center">OK</button>

@@ -5,3 +5,7 @@
     background-size: cover;
 	height: 700px;
 }
+
+input.smallInput {
+    width: 10%;
+}
