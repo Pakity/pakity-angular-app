@@ -1,16 +1,18 @@
 angular.module('sw', ['ngLodash', 'ui.router'])
-    .run(function($rootScope, $state) {
+    .run(function($rootScope, $state, API) {
         $rootScope.$state = $state;
         $rootScope.urls = {
             pinterestUrl: "https://www.pinterest.com/pakitybackpacks/",
             facebookUrl: "https://www.facebook.com/pakitybackpacking"
         };
+
+      API.getAccount()
+        .then(function(account) {
+            $rootScope.account = account;
+        });
     });
 $(document).ready(function() {
     $('.parallax').parallax();
-
-
-
 });
 
 (function() {

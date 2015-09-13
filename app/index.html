@@ -36,6 +36,7 @@
             <div class="nav-wrapper grey darken-3">
                 <a href="/#/"><img class="site-logo" src="/app/images/Pakity-Logo-White.png" /></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a ui-sref="account" ng-cloak>{{account.email}}</a></li>
                     <li><a href="sass.html">Blog</a></li>
                     <li><a href="badges.html">About</a></li>
                 </ul>
@@ -76,10 +77,11 @@
     <script src="../app/app.js"></script>
     <script src="../app/routes.js"></script>
     <script src="../app/js/home/home-ctrl.js"></script>
+    <script src="../app/js/account/account-ctrl.js"></script>
     <script src="../app/js/start/start-ctrl.js"></script>
     <script src="../app/js/contact/contact-ctrl.js"></script>
     <script src="../app/js/packs/packs-ctrl.js"></script>
     <script src="../app/js/packs/packs-detail-ctrl.js"></script>
     <script src="../app/js/api.js"></script>
-
+</body>
 </html>
