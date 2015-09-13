@@ -77,4 +77,6 @@ a.dropdown-button.btn.formClearDropdown {
     background-color: #a5d6a7 !important;
 }
 
-
+.padding-right {
+    padding-right: 15px;
+}

@@ -25,6 +25,20 @@ angular.module('sw').config(function ($stateProvider, $urlRouterProvider) {
       url: '/about',
       templateUrl: '/app/js/about/about.html',
       controller: 'AboutCtrl'
+    .state('account', {
+      url: '/account',
+      templateUrl: '/app/js/account/account.html',
+      controller: 'AccountCtrl'
+    })
+    .state('account.detail', {
+      url: '/detail',
+      templateUrl: '/app/js/account/detail.html',
+      controller: 'AccountCtrl'
+    })
+    .state('account.trips', {
+      url: '/trips',
+      templateUrl: '/app/js/account/trips.html',
+      controller: 'AccountCtrl'
     })
     .state('start', {
       url: '/start',
