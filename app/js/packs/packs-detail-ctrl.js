@@ -13,6 +13,7 @@ angular.module('sw').controller('PacksDetailCtrl', function($scope, $stateParams
         console.log('pack items', $scope.packItems);
       });
     console.log('selected pack', $scope.pack);
+    $scope.selectUrl = $scope.pack.url_img;
     $scope.checkboxButtonToggle = true;
   };
 
@@ -64,6 +65,10 @@ angular.module('sw').controller('PacksDetailCtrl', function($scope, $stateParams
     $scope.packItems = items;
     $scope.totalCost = controller.getTotalCost($scope.packItems);
     $scope.totalWeight = controller.getTotalWeight($scope.packItems);
+  };
+
+  $scope.selectedItemUrl = function(url){
+    $scope.selectUrl = url;
   };
 
   $scope.alreadyHaveBtn = function(item){
