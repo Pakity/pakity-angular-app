@@ -15,8 +15,11 @@
 
       <ul class="collection" ng-repeat="item in packItems">
         <li class="collection-item row" ng-class="item.listStatus">
+          <div class="col md2">
+            <img src="http://www.rei.com/zoom/dd/e025c1cc-90a3-46ee-a732-90b6f24fd7df.jpg/440" class="smallImg">
+          </div>
           <input ng-change="updateTotals(item)" ng-model="item.checked" id="{{item.id}}" type="checkbox" checked="checked"/>
-          <label for="{{item.id}}" class="col m12">
+          <label for="{{item.id}}" class="col m10 listItemLabel">
               <span style="padding-left: 25px">{{item.name}}</span>
               <span class="secondary-content">
                 Price: {{item.price | currency: '$'}} Weight: {{item.weight}}oz.

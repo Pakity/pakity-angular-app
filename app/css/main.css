@@ -77,4 +77,12 @@ a.dropdown-button.btn.formClearDropdown {
     background-color: #a5d6a7 !important;
 }
 
+.smallImg {
+    height: 50px;
+}
+
+.listItemLabel {
+    margin-top: 20px;
+}
+
 

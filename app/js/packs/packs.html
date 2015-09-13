@@ -1,6 +1,6 @@
-<div class="row">
-  <div class="col m3">
-    <div ng-repeat="pack in packs" class="collection">
+<!-- <div class="row">
+  <div ng-repeat="pack in packs" class="col m6">
+    <div  class="collection">
       <a ui-sref="packs.detail({packId: pack.id})"
          ng-click="selectPack(pack)"
          class="collection-item"
@@ -9,6 +9,8 @@
       </a>
     </div>
   </div>
+</div> -->
 
-  <ui-view class="col m9"></ui-view>
+<div class="row">
+ <ui-view class="col m12"></ui-view>
 </div>
