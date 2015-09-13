@@ -91,6 +91,7 @@ a.dropdown-button.btn.formClearDropdown {
 
 .listItemLabel {
     margin-top: 20px;
+    float: right !important;
 }
 
 .padding-right {
@@ -102,4 +103,18 @@ a.dropdown-button.btn.formClearDropdown {
 .social-link-data {
     color: #039be5;
     margin-left: 0.5em;
+}
+
+.listContainer{
+    overflow: scroll;
+    height: 375px;
+}
+
+.Bottom-checkout-btn{
+    margin-top:20px;
+}
+
+.cost-question {
+    padding-left: 100px !important;
+    margin-top: 50px;
 }

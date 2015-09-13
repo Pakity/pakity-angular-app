@@ -25,7 +25,7 @@ angular.module('sw').controller('StartCtrl', function($rootScope, $scope, API, $
   $scope.testing = function(){
     console.log($scope.customerInfo);
     $rootScope.customerInfo = $scope.customerInfo;
-    $state.go('packs');
+    $state.go('packs.detail',{packId:1});
   };
 
   $scope.init();
