@@ -1,4 +1,4 @@
-angular.module('sw').controller('StartCtrl', function($rootScope, $scope, API, $state) {
+angular.module('sw').controller('StartCtrl', function($rootScope, $scope, API, $state,$location, $anchorScroll) {
   var controller = this;
 
 
@@ -20,6 +20,11 @@ angular.module('sw').controller('StartCtrl', function($rootScope, $scope, API, $
   $scope.seasonToggleText = function(season){
     $scope.season = season;
     $scope.customerInfo.season = season;
+  };
+
+  $scope.scrollToInfo = function(){
+    $location.hash('infoSection');
+    $anchorScroll();
   };
 
   $scope.testing = function(){
