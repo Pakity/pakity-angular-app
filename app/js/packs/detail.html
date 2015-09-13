@@ -50,7 +50,7 @@
             <input ng-change="updateTotals(item)" ng-model="item.checked" id="{{item.gear.id}}" type="checkbox"
                    checked="checked"/>
             <label for="{{item.gear.id}}" class="col m10 listItemLabel">
-              <span style="padding-left: 25px">{{item.name}}</span>
+              <span style="padding-left: 25px">{{item.gear.name}}</span>
               <span class="secondary-content">
                 Price: {{item.gear.price | currency: '$'}} Weight: {{item.gear.weight}}oz.
               </span>
