@@ -4,7 +4,7 @@ angular.module('sw').controller('PacksDetailCtrl', function($scope, $stateParams
 
   $scope.init = function() {
     var packId = $stateParams.packId;
-    $scope.packageId = 1;
+    $scope.packageId = packId;
     console.log('packid', packId);
     $scope.pack = API.getPack(packId);
     API.getPackItems($scope.packageId)
@@ -13,6 +13,7 @@ angular.module('sw').controller('PacksDetailCtrl', function($scope, $stateParams
         console.log('pack items', $scope.packItems);
       });
     console.log('selected pack', $scope.pack);
+    $scope.selectUrl = $scope.pack.url_img;
     $scope.checkboxButtonToggle = true;
   };
 
@@ -56,14 +57,18 @@ angular.module('sw').controller('PacksDetailCtrl', function($scope, $stateParams
     lodash.each(packItems, function(item) {
       total += item.weight;
     });
-
-    return total;
+    console.log($scope.pack)
+    return total+40;
   };
 
   controller.setPackItems = function (items) {
     $scope.packItems = items;
     $scope.totalCost = controller.getTotalCost($scope.packItems);
     $scope.totalWeight = controller.getTotalWeight($scope.packItems);
+  };
+
+  $scope.selectedItemUrl = function(url){
+    $scope.selectUrl = url;
   };
 
   $scope.alreadyHaveBtn = function(item){

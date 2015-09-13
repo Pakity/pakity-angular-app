@@ -90,8 +90,18 @@ a.dropdown-button.btn.formClearDropdown {
 
 .listItemLabel {
     margin-top: 20px;
+    float: right !important;
 }
 
 .padding-right {
     padding-right: 15px;
+}
+
+.listContainer{
+    overflow: scroll;
+    height: 375px;
+}
+
+.Bottom-checkout-btn{
+    margin-top:20px;
 }
