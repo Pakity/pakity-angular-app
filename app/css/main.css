@@ -105,3 +105,13 @@ a.dropdown-button.btn.formClearDropdown {
 .Bottom-checkout-btn{
     margin-top:20px;
 }
+.cardOptionContainer{
+    height: 100vh;
+}
+
+.optionCardImg{
+    height: 260px;
+}
+.goBtn {
+    margin-left: 190px;
+}
