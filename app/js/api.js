@@ -98,17 +98,5 @@ angular.module('sw').factory('API', function(lodash, $http, $q) {
 
       return deferred.promise;
     }
-    getMyEquipment: function() {
-      var deferred = $q.defer();
-      var url = urlRoot + 'packages/1/';
-      var equipment = [
-        {id: 1, season: 'Fall', city: 'Salt Lake City', state: 'Utah', date: '1442096051', pack: {"url": "http://www.rei.com/product/846442/osprey-ariel-65-pack-womens", "gender": {"id": 2, "name": "Women"}, "price": 289.95, "brand": {"id": 1, "name": "Osprey"}, "url_img": "http://www.rei.com/zoom/ss/5c68885c-bd4b-4883-ab2e-a092fcb529bd.jpg/440", "id": 2, "frame_type": {"id": 1, "name": "Internal"}, "name": "Ariel 65 Pack"}},
-        {id: 2, season: 'Summer', city: 'Duluth', state: 'Minnesota', date: '1342096051', pack: {"url": "http://www.rei.com/product/878451/osprey-atmos-65-ag-pack", "gender": {"id": 1, "name": "Men"}, "price": 259.95, "brand": {"id": 1, "name": "Osprey"}, "url_img": "http://www.rei.com/zoom/nn/333921ad-d28e-416a-8d3f-130662ac0bfd.jpg/440", "id": 1, "frame_type": {"id": 1, "name": "Internal"}, "name": "Atmos 65 AG Pack"}}
-      ];
-
-      deferred.resolve(trips);
-
-      return deferred.promise;
-    }
   };
 });
