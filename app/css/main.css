@@ -99,5 +99,9 @@ a.dropdown-button.btn.formClearDropdown {
 
 .listContainer{
     overflow: scroll;
-    height: 430px;
+    height: 375px;
+}
+
+.Bottom-checkout-btn{
+    margin-top:20px;
 }
