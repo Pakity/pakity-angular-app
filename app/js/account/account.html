@@ -1,16 +1,14 @@
 <div class="row">
-  <div class="col m3 grey darken-3">
-    <div class="row">
-      <div class="col m12">
-        <a class="white-text" ui-sref=".detail">Details</a>
+  <div class="col offset-m2 m8">
+    <nav class="grey darken-2">
+      <div class="nav-wrapper">
+        <ul class="hide-on-med-and-down">
+          <li ng-class="{'active': $state.includes('account.detail')}"><a ui-sref=".detail">Details</a></li>
+          <li ng-class="{'active': $state.includes('account.trips')}"><a ui-sref=".trips">My Trips</a></li>
+        </ul>
       </div>
-      <div class="col m12">
-        <a class="white-text" ui-sref=".trips">My Trips</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col m9">
+    </nav>
     <ui-view></ui-view>
   </div>
 </div>
+

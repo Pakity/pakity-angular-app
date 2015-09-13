@@ -80,7 +80,8 @@ angular.module('sw').factory('API', function(lodash, $http, $q) {
 
       var account = {
         id: 1,
-        email: 'kim@pakity.com'
+        email: 'kim@pakity.com',
+        joinDate: '1442096051'
       };
 
       deferred.resolve(account);

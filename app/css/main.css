@@ -58,3 +58,7 @@ a.dropdown-button.btn.formClearDropdown {
 .smaller-btn:hover {
     background-color: #58C4F5;
 }
+
+.padding-right {
+    padding-right: 15px;
+}
