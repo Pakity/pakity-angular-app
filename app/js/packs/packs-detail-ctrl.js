@@ -4,7 +4,7 @@ angular.module('sw').controller('PacksDetailCtrl', function($scope, $stateParams
 
   $scope.init = function() {
     var packId = $stateParams.packId;
-    $scope.packageId = 1;
+    $scope.packageId = packId;
     console.log('packid', packId);
     $scope.pack = API.getPack(packId);
     API.getPackItems($scope.packageId)
