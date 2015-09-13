@@ -1,5 +1,5 @@
 .index-banner.banner-home {
-    background: url(../images/background2.jpg) center center fixed no-repeat;
+    background: url(../images/background1.jpg) center center fixed no-repeat;
     background-color: #294B70;
     background-size: cover;
     height: 800px;
@@ -11,14 +11,14 @@
 }
 
 .second-banner.banner-home {
-    background: url(../images/background1.jpg) center center fixed no-repeat;
+    background: url(../images/background2.jpg) center center fixed no-repeat;
     background-color: #294B70;
     background-size: cover;
     height: 400px;
 }
 
 .third-banner.banner-home {
-    background: url(../images/background4.jpg) center center fixed no-repeat;
+    background: url(../images/background3.jpg) center center fixed no-repeat;
     background-color: #294B70;
     background-size: cover;
     height: 400px;
