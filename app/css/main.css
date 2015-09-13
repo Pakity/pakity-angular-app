@@ -11,8 +11,7 @@
 }
 
 #infoSection {
-    height: 100vh;
-    padding-top: 120px;
+    padding-top: 40px;
 }
 
 .second-banner.banner-home {
@@ -134,6 +133,10 @@ a.dropdown-button.btn.formClearDropdown {
 .cost-question {
     padding-left: 100px !important;
     margin-top: 50px;
+}
+
+#topContainer{
+    padding-top: 60px;
 }
 
 

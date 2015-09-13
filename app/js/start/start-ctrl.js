@@ -6,6 +6,8 @@ angular.module('sw').controller('StartCtrl', function($rootScope, $scope, API, $
     $scope.gender = "";
     $scope.season = "";
     $scope.customerInfo = {};
+    $location.hash('topContainer');
+    $anchorScroll();
   };
 
   $scope.nextStep = function() {
