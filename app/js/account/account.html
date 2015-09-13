@@ -1,21 +1,16 @@
-<h2 class="header">My Account</h2>
-
-<hr/>
-<h2 class="header">My Trips</h2>
-
 <div class="row">
-  <div class="col offset-m2 m8">
+  <div class="col m3 grey darken-3">
+    <div class="row">
+      <div class="col m12">
+        <a class="white-text" ui-sref=".detail">Details</a>
+      </div>
+      <div class="col m12">
+        <a class="white-text" ui-sref=".trips">My Trips</a>
+      </div>
+    </div>
+  </div>
 
-    <ul class="collection">
-      <li class="collection-item" ng-repeat="trip in trips">
-        <div class="">
-          {{trip.city}}, {{trip.state}}
-          <span class="secondary-content">{{trip.date * 1000 | date:medium}} - {{trip.season}}</span>
-        </div>
-        <div class="">
-          {{trip.pack.brand.name}}{{trip.pack.name}} - {{trip.pack.price | currency:'$'}}
-        </div>
-      </li>
-    </ul>
+  <div class="col m9">
+    <ui-view></ui-view>
   </div>
 </div>
