@@ -1,17 +1,17 @@
-<h1 class="header">{{pack.brand.name}} - {{pack.name}}</h1>
+<h1>Total: {{totalCost | currency:"$"}} Pack Weight: {{totalWeight | number:2}}oz.</h1>
 <div class="row">
   <div class="col m3">
     <img src="{{pack.url_img}}" class=""/>
   </div>
   <div class="col offset-m1 m8">
-    <div class="row">
+<!--     <div class="row">
       <div>Weight: {{pack.weight}}</div>
       <div>Volume: {{pack.volume}}</div>
       <div>Price: {{pack.price}}</div>
       <div>Gender: {{pack.gender.name}}</div>
       <div>Url: <a href="{{pack.url}}" target="_blank">View Pack</a></div>
       <div>Colors: <span ng-repeat="color in pack.colors">{{color.color.name}} </span></div>
-    </div>
+    </div> -->
   <!--   <div class="row">
       <div class="col m4">
         <input type="radio" id="packageOne" name="packageSelect" ng-model="packageId" ng-change="selectPackage(1)" />
@@ -27,7 +27,21 @@
       </div>
     </div>
     <div class="row"> -->
-
+    <div class="listContainer">
+      <ul class="collection">
+        <li class="collection-item row" ng-class="item.listStatus">
+          <div class="col md2">
+            <img src="{{pack.url_img}}" class="smallImg">
+          </div>
+          <input  id="{{pack.id}}" type="checkbox" checked="checked"/>
+          <label for="{{pack.id}}" class="col m10 listItemLabel">
+              <span style="padding-left: 25px">{{pack.name}}</span>
+              <span class="secondary-content">
+                Price: {{pack.price | currency: '$'}} Weight: 48oz.
+              </span>
+          </label>
+        </li>
+      </ul>
       <ul class="collection" ng-repeat="item in packItems">
         <li class="collection-item row" ng-class="item.listStatus">
           <div class="col md2">
@@ -45,10 +59,9 @@
             <a ng-click="dontWantBtn(item)" ng-hide="item.disableDontWantBtn" class="waves-effect waves-light btn smaller-btn">Don't want it</a>
           </span>
         </li>
-
       </ul>
-      <h5>Total: {{totalCost | currency:"$"}}</h5>
-      <h5>Pack Weight: {{totalWeight | number:2}}oz.</h5>
+    </div>
+
     </div>
   </div>
 </div>

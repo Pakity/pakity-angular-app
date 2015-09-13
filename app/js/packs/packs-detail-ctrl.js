@@ -56,8 +56,8 @@ angular.module('sw').controller('PacksDetailCtrl', function($scope, $stateParams
     lodash.each(packItems, function(item) {
       total += item.weight;
     });
-
-    return total;
+    console.log($scope.pack)
+    return total+40;
   };
 
   controller.setPackItems = function (items) {
