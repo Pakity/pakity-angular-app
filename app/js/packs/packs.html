@@ -15,13 +15,13 @@
   </div>
 </div>
 <div class="row">
-  <div ng-repeat="pack in rangePacks" class="col m2">
+  <div ng-repeat="pack in rangePacks" class="col m4">
     <div  class="collection">
       <a ui-sref="packs.detail({packId: pack.id})"
          ng-click="selectPack(pack)"
          class="collection-item"
          ng-class="{active: selectedPack.id == pack.id}">
-        {{pack.name}}
+        {{pack.brand.name}} {{pack.name}} - {{pack.price | currency: '$'}}
       </a>
     </div>
   </div>
