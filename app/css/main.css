@@ -105,3 +105,8 @@ a.dropdown-button.btn.formClearDropdown {
 .Bottom-checkout-btn{
     margin-top:20px;
 }
+
+.cost-question {
+    padding-left: 100px !important;
+    margin-top: 50px;
+}
