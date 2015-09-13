@@ -80,6 +80,7 @@ a.dropdown-button.btn.formClearDropdown {
   width: 100%;
   display: block;
 }
+
 .alreadyHave {
     background-color: #a5d6a7 !important;
 }
@@ -94,4 +95,11 @@ a.dropdown-button.btn.formClearDropdown {
 
 .padding-right {
     padding-right: 15px;
+}
+
+.social-link {}
+
+.social-link-data {
+    color: #039be5;
+    margin-left: 0.5em;
 }

@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-    <title>Columbia, MO - Pakity</title>
+    <title>Pakity</title>
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../bower_components/materialize/dist/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
@@ -31,7 +31,7 @@
     </script>
 </head>
 
-<body ng-app="sw">
+<body ng-app="sw" ng-controller="AppCtrl">
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper grey darken-3">
@@ -51,16 +51,25 @@
     <footer class="page-footer grey darken-3">
         <div class="container">
             <div class="row">
-                <div class="col l6 s12">
+                <div class="col s12 m4">
                     <h5 class="white-text">Pakity</h5>
                     <p class="grey-text text-lighten-4">We've got you packed</p>
                 </div>
-                <div class="col l4 offset-l2 s12">
+                <div class="col s12 m4">
                     <h5 class="white-text">Explore</h5>
                     <ul>
                         <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
                         <li><a class="grey-text text-lighten-3" ui-sref="blog">Blog</a></li>
                         <li><a class="grey-text text-lighten-3" ui-sref="about">About</a></li>
+                    </ul>
+                </div>
+                <div class="col s12 m4">
+                    <h5 class="white-text">Connect</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3 social-link" ng-href="{{urls.facebook}}" target="_blank">Facebook<span class="social-link-data">{{facebookLikeCount}} likes</span></a></li>
+                        <li><a class="grey-text text-lighten-3 social-link" ng-href="{{urls.twitter}}" target="_blank">Twitter</a></li>
+                        <li><a class="grey-text text-lighten-3 social-link" ng-href="{{urls.instagram}}" target="_blank">Instagram</a></li>
+                        <li><a class="grey-text text-lighten-3 social-link" ng-href="{{urls.pinterest}}" target="_blank">Pinterest</a></li>
                     </ul>
                 </div>
             </div>
@@ -78,6 +87,7 @@
     <script src="../bower_components/ng-lodash/build/ng-lodash.js"></script>
     <script src="../app/app.js"></script>
     <script src="../app/routes.js"></script>
+    <script src="../app/js/app-ctrl.js"></script>
     <script src="../app/js/home/home-ctrl.js"></script>
     <script src="../app/js/account/account-ctrl.js"></script>
     <script src="../app/js/start/start-ctrl.js"></script>
