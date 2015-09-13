@@ -1,15 +1,32 @@
-<!-- <div class="row">
-  <div ng-repeat="pack in packs" class="col m6">
+<div class="row">
+  <div class="col m5 cost-question">
+    <h5 class="header">What's your backpack cost range?</h5>
+  </div>
+  <div class="collection col m2">
+    <div class="collection-item">
+      <a ng-click="selectPriceRange(0)">$100 - $300 <span>({{ranges[0].packs.length}})</span></a>
+    </div>
+    <div class="collection-item">
+      <a ng-click="selectPriceRange(1)">$300 - $500 <span>({{ranges[1].packs.length}})</span></a>
+    </div>
+    <div class="collection-item">
+      <a ng-click="selectPriceRange(2)">$500+ <span>({{ranges[2].packs.length}})</span></a>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div ng-show="!rangePacks.length" class="col m12 center"><h5>Select a price range</h5></div>
+  <div ng-repeat="pack in rangePacks" class="col m4">
     <div  class="collection">
       <a ui-sref="packs.detail({packId: pack.id})"
          ng-click="selectPack(pack)"
          class="collection-item"
          ng-class="{active: selectedPack.id == pack.id}">
-        {{pack.name}}
+        {{pack.brand.name}} {{pack.name}} - {{pack.price | currency: '$'}}
       </a>
     </div>
   </div>
-</div> -->
+</div>
 
 <div class="row">
  <ui-view class="col m12"></ui-view>

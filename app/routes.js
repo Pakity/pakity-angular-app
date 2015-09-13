@@ -41,6 +41,11 @@ angular.module('sw').config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: '/app/js/account/trips.html',
       controller: 'AccountCtrl'
     })
+     .state('account.equipment', {
+      url: '/equipment',
+      templateUrl: '/app/js/account/equipment.html',
+      controller: 'AccountCtrl'
+    })
     .state('start', {
       url: '/start',
       templateUrl: '/app/js/start/start.html',
