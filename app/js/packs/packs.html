@@ -15,6 +15,7 @@
   </div>
 </div>
 <div class="row">
+  <div ng-show="!rangePacks.length" class="col m12 center"><h5>Select a price range</h5></div>
   <div ng-repeat="pack in rangePacks" class="col m4">
     <div  class="collection">
       <a ui-sref="packs.detail({packId: pack.id})"

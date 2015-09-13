@@ -22,6 +22,7 @@ angular.module('sw').controller('PacksCtrl', function($rootScope, $scope, API, $
     });
 
     $scope.rangePacks = $scope.selectedRange.packs;
+    $state.go('packs');
   };
 
   controller.setPriceRanges = function(packs) {
