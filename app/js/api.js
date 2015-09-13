@@ -39,7 +39,6 @@ angular.module('sw').factory('API', function(lodash, $http, $q) {
         var data = getFakeData();
         that.packs = data.backpacks;
         deferred.resolve(data.backpacks);
-
         return deferred.promise;
       }
 
@@ -50,11 +49,13 @@ angular.module('sw').factory('API', function(lodash, $http, $q) {
         url += '&start=1';
         url += '&end=1';
 
-      return $http.get(url)
+      $http.get(url)
         .then(function(response) {
           console.log('response.data', response.data);
           that.packs = response.data.backpacks;
+          deferred.resolve(that.packs);
         });
+      return deferred.promise;
     },
     getPack: function(packId) {
       var that = this;
