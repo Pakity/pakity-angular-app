@@ -5,52 +5,61 @@
 
       <div class="card col m4 travelOptionCards">
         <div class="card-image">
-          <img src="images/camping.png" class="optionCardImg">
+          <img src="/app/images/camping.png" class="optionCardImg">
           <span class="card-title">Camping</span>
         </div>
       </div>
 
-      <div class="card col m4 travelOptionCards">
+      <div ng-click="scrollToInfo()" class="card col m4 travelOptionCards">
         <div class="card-image">
-          <img src="images/hiking.png" class="optionCardImg">
+          <img src="/app/images/hiking.png" class="optionCardImg">
           <span class="card-title">Hiking</span>
         </div>
       </div>
 
       <div class="card col m4 travelOptionCards">
         <div class="card-image">
-          <img src="images/traveling.png" class="optionCardImg">
+          <img src="/app/images/traveling.png" class="optionCardImg">
           <span class="card-title">Traveling</span>
         </div>
       </div>
 
     </div>
 
+
+    <div class="row" id="infoSection">
+      <p class="col s12 center flow-text">
+        I am looking to backpack around the zip code
+        <input ng-model="customerInfo.zipcode" class="smallInput" type="text"/>
+      </p>
+      <p class="col s12 center flow-text">
+        I am and looking to travel for  <input ng-model="customerInfo.days" class="smallInput" type="text"/> days around <a class='dropdown-button btn formClearDropdown' href='#' data-activates='dropdown-season'>{{season}}</a>.
+      </p>
+      <p class="col s12 center flow-text">
+        I am a <a class='dropdown-button btn formClearDropdown' href='#' data-activates='dropdown-gender'>{{gender}}</a>
+        with a waist size of <input ng-model="customerInfo.waistSize" class="smallInput" type="text"/>in. and a torso size of <input ng-model="customerInfo.torsoSize" class="smallInput" type="text"/>in.
+      </p>
+      <ul id='dropdown-season' class='dropdown-content'>
+        <li><a ng-click="seasonToggleText('SPRING')">Spring</a></li>
+        <li><a ng-click="seasonToggleText('SUMMER') ">Summer</a></li>
+        <li><a ng-click="seasonToggleText('FALL') ">Fall</a></li>
+        <li><a ng-click="seasonToggleText('WINTER') ">Winter</a></li>
+      </ul>
+      <ul id='dropdown-gender' class='dropdown-content'>
+        <li><a id="male" ng-click="genderToggleText('Men')">Male</a></li>
+        <li><a id="female" ng-click="genderToggleText('Women') ">Female</a></li>
+      </ul>
+      <button ng-click="testing()" class="btn center goBtn">GO!</button>
+    </div>
+
+
+
+
+
+
+
   </div>
-  <div class="row">
-    <p class="col s12 center flow-text">
-      I am looking to backpack around the zip code
-      <input ng-model="customerInfo.zipcode" class="smallInput" type="text"/>
-    </p>
-    <p class="col s12 center flow-text">
-      I am and looking to travel for  <input ng-model="customerInfo.days" class="smallInput" type="text"/> days around <a class='dropdown-button btn formClearDropdown' href='#' data-activates='dropdown-season'>{{season}}</a>.
-    </p>
-    <p class="col s12 center flow-text">
-      I am a <a class='dropdown-button btn formClearDropdown' href='#' data-activates='dropdown-gender'>{{gender}}</a>
-      with a waist size of <input ng-model="customerInfo.waistSize" class="smallInput" type="text"/>in. and a torso size of <input ng-model="customerInfo.torsoSize" class="smallInput" type="text"/>in.
-    </p>
-    <ul id='dropdown-season' class='dropdown-content'>
-      <li><a ng-click="seasonToggleText('SPRING')">Spring</a></li>
-      <li><a ng-click="seasonToggleText('SUMMER') ">Summer</a></li>
-      <li><a ng-click="seasonToggleText('FALL') ">Fall</a></li>
-      <li><a ng-click="seasonToggleText('WINTER') ">Winter</a></li>
-    </ul>
-    <ul id='dropdown-gender' class='dropdown-content'>
-      <li><a id="male" ng-click="genderToggleText('Men')">Male</a></li>
-      <li><a id="female" ng-click="genderToggleText('Women') ">Female</a></li>
-    </ul>
-  <button ng-click="testing()" class="btn center goBtn">GO!</button>
-</div>
+
 
 <script>
   $('.dropdown-button').dropdown({
