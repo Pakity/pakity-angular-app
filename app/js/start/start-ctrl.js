@@ -13,7 +13,7 @@ angular.module('sw').controller('StartCtrl', function($rootScope, $scope, API, $
   };
 
   $scope.genderToggleText = function(gender){
-    $scope.gender = gender;
+    $scope.gender = (gender == 'Men') ? 'Male' : 'Female';
     $scope.customerInfo.gender = gender;
   };
 
