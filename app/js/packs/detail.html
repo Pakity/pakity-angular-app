@@ -1,71 +1,72 @@
-<h1>Total: {{totalCost | currency:"$"}} Pack Weight: {{totalWeight | number:2}}oz.</h1>
+<hr />
+<div class="row">
+  <div class="col offset-m5 m3"><h4>Total: {{totalCost | currency:'$'}}</h4></div>
+  <div class="col m3"><h4>{{totalWeight | number:2}}oz.</h4></div>
+</div>
 <div class="row">
   <div class="col m3">
     <img src="{{selectUrl}}" class=""/>
   </div>
   <div class="col offset-m1 m8">
-<!--     <div class="row">
-      <div>Weight: {{pack.weight}}</div>
-      <div>Volume: {{pack.volume}}</div>
-      <div>Price: {{pack.price}}</div>
-      <div>Gender: {{pack.gender.name}}</div>
-      <div>Url: <a href="{{pack.url}}" target="_blank">View Pack</a></div>
-      <div>Colors: <span ng-repeat="color in pack.colors">{{color.color.name}} </span></div>
-    </div> -->
-  <div class="row">
+    <div class="row">
       <div class="col m4">
-        <input type="radio" id="packageOne" name="packageSelect" ng-model="packageId" value="1" ng-change="selectPackage(1)" />
+        <input type="radio" id="packageOne" name="packageSelect" ng-model="packageId" value="1"
+               ng-change="selectPackage(1)"/>
         <label for="packageOne">Package 1</label>
       </div>
       <div class="col m4">
-        <input type="radio" id="packageTwo" name="packageSelect" ng-model="packageId" value="2" ng-change="selectPackage(2)" />
+        <input type="radio" id="packageTwo" name="packageSelect" ng-model="packageId" value="2"
+               ng-change="selectPackage(2)"/>
         <label for="packageTwo">Package 2</label>
       </div>
       <div class="col m4">
-        <input type="radio" id="packageThree" name="packageSelect" ng-model="packageId" value="3" ng-change="selectPackage(3)" />
+        <input type="radio" id="packageThree" name="packageSelect" ng-model="packageId" value="3"
+               ng-change="selectPackage(3)"/>
         <label for="packageThree">Package 3</label>
       </div>
     </div>
 
     <div class="row">
-    <div class="listContainer">
-      <ul ng-click="selectedItemUrl(pack.url_img)"class="collection">
-        <li class="collection-item row" ng-class="item.listStatus">
-          <div class="col md2">
-            <img src="{{pack.url_img}}" class="smallImg">
-          </div>
-          <input  id="{{pack.id}}" type="checkbox" checked="checked"/>
-          <label for="{{pack.id}}" class="col m10 listItemLabel">
+      <div class="listContainer">
+        <ul ng-click="selectedItemUrl(pack.colors[0].url_img)" class="collection">
+          <li class="collection-item row" ng-class="item.listStatus">
+            <div class="col md2">
+              <img src="{{pack.colors[0].url_img}}" class="smallImg">
+            </div>
+            <input id="{{pack.id}}" type="checkbox" checked="checked"/>
+            <label for="{{pack.id}}" class="col m10 listItemLabel">
               <span style="padding-left: 25px">{{pack.name}}</span>
               <span class="secondary-content">
                 Price: {{pack.price | currency: '$'}} Weight: 48oz.
               </span>
-          </label>
-        </li>
-      </ul>
-      <ul ng-click="selectedItemUrl(item.gear.url_img)" class="collection" ng-repeat="item in packItems">
-        <li class="collection-item row" ng-class="item.listStatus">
-          <div class="col md2">
-            <img src="{{item.gear.url_img}}" class="smallImg">
-          </div>
-          <input ng-change="updateTotals(item)" ng-model="item.checked" id="{{item.gear.id}}" type="checkbox" checked="checked"/>
-          <label for="{{item.gear.id}}" class="col m10 listItemLabel">
-              <span style="padding-left: 25px">{{item.name}}</span>
+            </label>
+          </li>
+        </ul>
+        <ul ng-click="selectedItemUrl(item.gear.url_img)" class="collection" ng-repeat="item in packItems">
+          <li class="collection-item row" ng-class="item.listStatus">
+            <div class="col md2">
+              <img src="{{item.gear.url_img}}" class="smallImg">
+            </div>
+            <input ng-change="updateTotals(item)" ng-model="item.checked" id="{{item.gear.id}}" type="checkbox"
+                   checked="checked"/>
+            <label for="{{item.gear.id}}" class="col m10 listItemLabel">
+              <span style="padding-left: 25px">{{item.gear.name}}</span>
               <span class="secondary-content">
                 Price: {{item.gear.price | currency: '$'}} Weight: {{item.gear.weight}}oz.
               </span>
-          </label>
+            </label>
           <span ng-hide="item.checked || item.dontWantBtnClick">
-            <a ng-click="alreadyHaveBtn(item)"class="waves-effect waves-light btn smaller-btn">Already have it</a>
-            <a ng-click="dontWantBtn(item)" ng-hide="item.disableDontWantBtn" class="waves-effect waves-light btn smaller-btn">Don't want it</a>
+            <a ng-click="alreadyHaveBtn(item)" class="waves-effect waves-light btn smaller-btn">Already have it</a>
+            <a ng-click="dontWantBtn(item)" ng-hide="item.disableDontWantBtn"
+               class="waves-effect waves-light btn smaller-btn">Don't want it</a>
           </span>
-        </li>
-      </ul>
-    </div>
-    <div class="Bottom-checkout-btn">
-      <a class="waves-effect waves-light btn smaller-btn">Add Item</a>
-      <a class="waves-effect waves-light btn smaller-btn">Checkout!</a>
-    </div>
+          </li>
+        </ul>
+      </div>
+      <div class="Bottom-checkout-btn">
+        <a class="waves-effect waves-light btn smaller-btn">Add Item</a>
+        <a class="waves-effect waves-light btn smaller-btn">Checkout!</a>
+      </div>
 
     </div>
   </div>

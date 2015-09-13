@@ -15,7 +15,7 @@ angular.module('sw').controller('PacksDetailCtrl', function($scope, $stateParams
 
     controller.setAllPackages();
     console.log('selected pack', $scope.pack);
-    $scope.selectUrl = $scope.pack.url_img;
+    $scope.selectUrl = $scope.pack.colors[0].url_img;
     $scope.checkboxButtonToggle = true;
   };
 
