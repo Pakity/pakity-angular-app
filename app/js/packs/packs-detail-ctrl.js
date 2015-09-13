@@ -1,16 +1,15 @@
 angular.module('sw').controller('PacksDetailCtrl', function($scope, $stateParams, API, lodash) {
   var controller = this;
 
+
   $scope.init = function() {
     var packId = $stateParams.packId;
+    $scope.packageId = 1;
     console.log('packid', packId);
     $scope.pack = API.getPack(packId);
-    API.getPackItems(packId)
+    API.getPackItems($scope.packageId)
       .then(function(items) {
-        $scope.packItems = items;
-        $scope.totalCost = controller.getTotalCost($scope.packItems);
-        $scope.totalWeight = controller.getTotalWeight($scope.packItems);
-
+        controller.setPackItems(items);
         console.log('pack items', $scope.packItems);
       });
     console.log('selected pack', $scope.pack);
@@ -20,7 +19,7 @@ angular.module('sw').controller('PacksDetailCtrl', function($scope, $stateParams
   $scope.updateTotals = function(item) {
     console.log('item', item);
     if(item.checked) {
-      item.listStatus = ""
+      item.listStatus = "";
       item.disableDontWantBtn = false;
       item.dontWantBtnClick = false;
       $scope.totalCost += item.price;
@@ -30,6 +29,14 @@ angular.module('sw').controller('PacksDetailCtrl', function($scope, $stateParams
       $scope.totalCost -= item.price;
       $scope.totalWeight -= item.weight;
     }
+  };
+
+  $scope.selectPackage = function(packageId) {
+    console.log('new package', packageId);
+    API.getPackItems(packageId)
+      .then(function(items) {
+        controller.setPackItems(items);
+      })
   };
 
   controller.getTotalCost = function(packItems) {
@@ -51,6 +58,12 @@ angular.module('sw').controller('PacksDetailCtrl', function($scope, $stateParams
     });
 
     return total;
+  };
+
+  controller.setPackItems = function (items) {
+    $scope.packItems = items;
+    $scope.totalCost = controller.getTotalCost($scope.packItems);
+    $scope.totalWeight = controller.getTotalWeight($scope.packItems);
   };
 
   $scope.alreadyHaveBtn = function(item){

@@ -14,8 +14,8 @@ angular.module('sw').factory('API', function(lodash, $http, $q) {
 
   function getFakeData() {
     return {"backpacks": [
-      {"url": "http://www.rei.com/product/878451/osprey-atmos-65-ag-pack", "gender": {"id": 1, "name": "Men"}, "price": 259.95, "brand": {"id": 1, "name": "Osprey"}, "url_img": "http://www.rei.com/zoom/nn/333921ad-d28e-416a-8d3f-130662ac0bfd.jpg/440", "id": 1, "frame_type": {"id": 1, "name": "Internal"}, "name": "Atmos 65 AG Pack"},
-      {"url": "http://www.rei.com/product/846442/osprey-ariel-65-pack-womens", "gender": {"id": 2, "name": "Women"}, "price": 289.95, "brand": {"id": 1, "name": "Osprey"}, "url_img": "http://www.rei.com/zoom/ss/5c68885c-bd4b-4883-ab2e-a092fcb529bd.jpg/440", "id": 2, "frame_type": {"id": 1, "name": "Internal"}, "name": "Ariel 65 Pack"}]}
+      {"colors":[{"color": {"name": "Vermillion Red"}}], "url": "http://www.rei.com/product/878451/osprey-atmos-65-ag-pack", "gender": {"id": 1, "name": "Men"}, "price": 259.95, "brand": {"id": 1, "name": "Osprey"}, "url_img": "http://www.rei.com/zoom/nn/333921ad-d28e-416a-8d3f-130662ac0bfd.jpg/440", "id": 1, "frame_type": {"id": 1, "name": "Internal"}, "name": "Atmos 65 AG Pack"},
+      {"colors":[{"color": {"name": "Summer Wheat Brown"}}], "url": "http://www.rei.com/product/846442/osprey-ariel-65-pack-womens", "gender": {"id": 2, "name": "Women"}, "price": 289.95, "brand": {"id": 1, "name": "Osprey"}, "url_img": "http://www.rei.com/zoom/ss/5c68885c-bd4b-4883-ab2e-a092fcb529bd.jpg/440", "id": 2, "frame_type": {"id": 1, "name": "Internal"}, "name": "Ariel 65 Pack"}]}
   }
 
   function getPack(packId){
@@ -46,12 +46,13 @@ angular.module('sw').factory('API', function(lodash, $http, $q) {
       var url = urlRoot + 'backpack';
         url += '?torso=' + data.torsoSize || 1;
         url += '&waist=' + data.waistSize || 1;
-        url += '&gender=' + data.gender || 'female';
-        url += '&start=' + 1;
-        url += '&end=' + 1;
+        url += '&gender=' + data.gender || 'Women';
+        url += '&start=1';
+        url += '&end=1';
 
       return $http.get(url)
         .then(function(response) {
+          console.log('response.data', response.data);
           that.packs = response.data.backpacks;
         });
     },
@@ -64,14 +65,10 @@ angular.module('sw').factory('API', function(lodash, $http, $q) {
     postCustomerInfo: postCustomerInfo,
     getPackItems: function(packId) {
       var deferred = $q.defer();
-      var items = [
-        {id: 1, name: 'Socks', weight: 10, price: 10.12},
-        {id: 2, name: 'Shirts', weight: 22, price: 15.11},
-        {id: 3, name: 'Flashlight', weight: 30, price: 22.45},
-        {id: 4, name: 'Notebook', weight: 5, price: 5.00}
-      ];
-
-      deferred.resolve(items);
+      $http.get(urlRoot + '/packages/' + packId)
+        .then(function(response) {
+          deferred.resolve(response.data);
+        });
 
       return deferred.promise;
     },

@@ -3,14 +3,10 @@ angular.module('sw').controller('PacksCtrl', function($rootScope, $scope, API, $
 
   $scope.init = function() {
     $scope.customerInfo = $rootScope.customerInfo;
-    //if($scope.customerInfo == undefined) {
-    //  $state.go('start');
-    //  return;
-    //}
+
     API.getPacks($scope.customerInfo)
-      .then(function(response) {
+      .then(function() {
         $scope.packs = API.packs;
-        console.log('packs', $scope.packs);
       });
   };
 
