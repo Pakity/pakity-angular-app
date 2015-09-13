@@ -31,6 +31,13 @@
     height: 400px;
 }
 
+.banner-about {
+    background: url(../images/group.jpg) center center fixed no-repeat;
+    background-color: #294B70;
+    background-size: cover;
+    height: 600px;
+}
+
 .bottom-padding {
     padding-bottom: 150px;
 }
