@@ -10,6 +10,11 @@
     padding-left: 10px;
 }
 
+#infoSection {
+    height: 100vh;
+    padding-top: 120px;
+}
+
 .second-banner.banner-home {
     background: url(../images/background2.jpg) center center fixed no-repeat;
     background-color: #294B70;
@@ -114,7 +119,21 @@ a.dropdown-button.btn.formClearDropdown {
     margin-top:20px;
 }
 
+.cardOptionContainer{
+    height: 100vh;
+    padding-top: 70px;
+}
+
+.optionCardImg{
+    height: 260px;
+}
+.goBtn {
+    margin-left: 190px;
+}
+
 .cost-question {
     padding-left: 100px !important;
     margin-top: 50px;
 }
+
+
