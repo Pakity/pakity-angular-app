@@ -1,4 +1,4 @@
-angular.module('sw', ['ngLodash', 'ui.router','ng-token-auth'])
+angular.module('sw', ['ngLodash', 'ui.router'])
     .run(function($rootScope, $state, API) {
         $rootScope.$state = $state;
         API.getAccount()
