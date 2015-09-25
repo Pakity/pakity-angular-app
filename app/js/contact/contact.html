@@ -1,27 +1,27 @@
 <div class="row">
-  <form ng-show="contactSubmitForm" class="col s12">
+  <script type="text/javascript">var submitted=false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+onload="if(submitted) {window.location='whateveryourredirectis.html';}"></iframe>
+
+  <form ng-controller="ContactCtrl" action="https://docs.google.com/forms/d/1vZI9C1SsCFQ6s2RJtOcaUHIDyy2iaSXfWRLIDy1G-cE/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true" class="col s12">
     <div class="row">
       <div class="input-field col s6">
-        <input id="first_name" type="text" class="validate">
-        <label for="first_name">First Name</label>
-      </div>
-      <div class="input-field col s6">
-        <input id="last_name" type="text" class="validate">
-        <label for="last_name">Last Name</label>
+        <input name="entry.36952477" id="entry_36952477" type="text" class="validate">
+        <label for="entry_36952477">What's your name?</label>
       </div>
     </div>
 
     <div class="row">
       <div class="input-field col s12">
-        <input id="email" type="email" class="validate">
-        <label for="email">Email</label>
+        <input name="entry.1044119101" id="entry_1044119101" type="email" class="validate">
+        <label for="entry_1044119101">Whats your Email?</label>
       </div>
     </div>
 
     <div class="row">
       <div class="input-field col s12">
-        <input id="interest" type="text" class="validate">
-        <label for="interest">What are you into?</label>
+        <input name="entry.1708927651" id="entry_1708927651" type="text" class="validate">
+        <label for="entry_1708927651">How did you hear about us?</label>
       </div>
     </div>
 
