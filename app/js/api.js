@@ -97,6 +97,7 @@ angular.module('sw').factory('API', function(lodash, $http, $q) {
       deferred.resolve(trips);
 
       return deferred.promise;
+
     },
     getMyEquipment: function() {
       var deferred = $q.defer();
