@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col offset-m2 m8">
+    <nav class="grey darken-2">
+      <div class="nav-wrapper">
+        <ul class="hide-on-med-and-down">
+          <li ng-class="{'active': $state.includes('account.detail')}"><a ui-sref=".detail">Details</a></li>
+          <li ng-class="{'active': $state.includes('account.trips')}"><a ui-sref=".trips">My Trips</a></li>
+          <li ng-class="{'active': $state.includes('account.equipment')}"><a ui-sref=".equipment">My Equipment</a></li>
+        </ul>
+      </div>
+    </nav>
+    <ui-view></ui-view>
+  </div>
+</div>
+

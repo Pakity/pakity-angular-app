@@ -5,12 +5,9 @@ angular.module('sw').controller('ContactCtrl', function($scope, $http) {
   $scope.init = function() {
     $scope.contactSubmitForm = true;
     $scope.contactSubmitMessage = false;
+    $scope.formData = {};
   };
 
   $scope.init();
 
-  $scope.submitContactForm = function(){
-    $scope.contactSubmitForm = false;
-    $scope.contactSubmitMessage = true;
-  }
 });

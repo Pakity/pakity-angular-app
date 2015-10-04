@@ -1,24 +1,28 @@
 .index-banner.banner-home {
-    background: url(../images/background2.jpg) center center fixed no-repeat;
+    background: url(../images/background1.jpg) center center fixed no-repeat;
     background-color: #294B70;
     background-size: cover;
     height: 800px;
 }
 
 .site-logo {
-    height: 75px;
+    height: 60px;
     padding-left: 10px;
 }
 
+#infoSection {
+    padding-top: 40px;
+}
+
 .second-banner.banner-home {
-    background: url(../images/background1.jpg) center center fixed no-repeat;
+    background: url(../images/background2.jpg) center center fixed no-repeat;
     background-color: #294B70;
     background-size: cover;
     height: 400px;
 }
 
 .third-banner.banner-home {
-    background: url(../images/background4.jpg) center center fixed no-repeat;
+    background: url(../images/background3.jpg) center center fixed no-repeat;
     background-color: #294B70;
     background-size: cover;
     height: 400px;
@@ -29,6 +33,13 @@
     background-color: #294B70;
     background-size: cover;
     height: 400px;
+}
+
+.banner-about {
+    background: url(../images/group.jpg) center center fixed no-repeat;
+    background-color: #294B70;
+    background-size: cover;
+    height: 600px;
 }
 
 .bottom-padding {
@@ -73,8 +84,59 @@ a.dropdown-button.btn.formClearDropdown {
   width: 100%;
   display: block;
 }
+
 .alreadyHave {
     background-color: #a5d6a7 !important;
+}
+
+.smallImg {
+    height: 50px;
+}
+
+.listItemLabel {
+    margin-top: 20px;
+    float: right !important;
+}
+
+.padding-right {
+    padding-right: 15px;
+}
+
+.social-link {}
+
+.social-link-data {
+    color: #039be5;
+    margin-left: 0.5em;
+}
+
+.listContainer{
+    overflow: scroll;
+    height: 375px;
+}
+
+.Bottom-checkout-btn{
+    margin-top:20px;
+}
+
+.cardOptionContainer{
+    height: 100vh;
+    padding-top: 70px;
+}
+
+.optionCardImg{
+    height: 260px;
+}
+.goBtn {
+    margin-left: 190px;
+}
+
+.cost-question {
+    padding-left: 100px !important;
+    margin-top: 50px;
+}
+
+#topContainer{
+    padding-top: 60px;
 }
 
 
