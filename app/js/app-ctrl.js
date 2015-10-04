@@ -7,9 +7,6 @@ angular.module('sw').controller('AppCtrl', function($scope, $document, $http, $l
             instagram: "https://instagram.com/pakitybackpacks/",
             pinterest: "https://www.pinterest.com/pakitybackpacks/"
         };
-        $document.ready(function() {
-            $('.parallax').parallax();
-        });
         var facebook_like_count_api = "https://api.facebook.com/method/fql.query?query=select%20like_count%20from%20link_stat%20where%20url=%27https://www.facebook.com/pakitybackpacking/%27&format=json";
         $http.get(facebook_like_count_api)
             .then(function (response) {
