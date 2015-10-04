@@ -2,11 +2,11 @@
     background: url(../images/background1.jpg) center center no-repeat;
     background-color: #294B70;
     background-size: cover;
-    height: 800px;
+    height: 600px;
 }
 
 .site-logo {
-    height: 60px;
+    height: 50px;
     padding-left: 10px;
 }
 
