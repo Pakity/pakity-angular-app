@@ -1,12 +1,12 @@
 .index-banner.banner-home {
-    background: url(../images/background1.jpg) center center fixed no-repeat;
+    background: url(../images/background1.jpg) center center no-repeat;
     background-color: #294B70;
     background-size: cover;
     height: 600px;
 }
 
 .site-logo {
-    height: 60px;
+    height: 50px;
     padding-left: 10px;
 }
 
@@ -15,21 +15,21 @@
 }
 
 .second-banner.banner-home {
-    background: url(../images/background2.jpg) center center fixed no-repeat;
+    background: url(../images/background2.jpg) center center no-repeat;
     background-color: #294B70;
     background-size: cover;
     height: 400px;
 }
 
 .third-banner.banner-home {
-    background: url(../images/background3.jpg) center center fixed no-repeat;
+    background: url(../images/background3.jpg) center center no-repeat;
     background-color: #294B70;
     background-size: cover;
     height: 400px;
 }
 
 .banner-footer {
-    background: url(../images/Pakity-Footer.png) center center fixed no-repeat;
+    background: url(../images/Pakity-Footer.png) center center no-repeat;
     background-color: #294B70;
     background-size: cover;
     height: 400px;
@@ -41,7 +41,7 @@
 }
 
 .banner-about {
-    background: url(../images/group.jpg) center center fixed no-repeat;
+    background: url(../images/group.jpg) center center no-repeat;
     background-color: #294B70;
     background-size: cover;
     height: 600px;
