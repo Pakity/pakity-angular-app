@@ -35,6 +35,11 @@
     height: 400px;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+    width: 100%;
+}
+
 .banner-about {
     background: url(../images/group.jpg) center center fixed no-repeat;
     background-color: #294B70;
