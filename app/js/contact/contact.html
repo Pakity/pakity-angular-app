@@ -4,31 +4,37 @@
 onload="if(submitted) {window.location='whateveryourredirectis.html';}"></iframe>
 
   <form ng-controller="ContactCtrl" action="https://docs.google.com/forms/d/1vZI9C1SsCFQ6s2RJtOcaUHIDyy2iaSXfWRLIDy1G-cE/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true" class="col s12">
-    <div class="row">
-      <div class="input-field col s6">
-        <input name="entry.36952477" id="entry_36952477" type="text" class="validate">
-        <label for="entry_36952477">What's your name?</label>
+    <div class="container">
+      <div class="row">
+        <div class="bottom-padding-small"></div>
+        <h5 class="header">Sign up to become a member and receive Pakity notifications</h5>
       </div>
-    </div>
-
-    <div class="row">
-      <div class="input-field col s12">
-        <input name="entry.1044119101" id="entry_1044119101" type="email" class="validate">
-        <label for="entry_1044119101">Whats your Email?</label>
+      <div class="row">
+        <div class="input-field col s6">
+          <input name="entry.36952477" id="entry_36952477" type="text" class="validate">
+          <label for="entry_36952477">What's your name?</label>
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="input-field col s12">
-        <input name="entry.1708927651" id="entry_1708927651" type="text" class="validate">
-        <label for="entry_1708927651">How did you hear about us?</label>
+      <div class="row">
+        <div class="input-field col s6">
+          <input name="entry.1044119101" id="entry_1044119101" type="email" class="validate">
+          <label for="entry_1044119101">Whats your email?</label>
+        </div>
       </div>
+
+      <div class="row">
+        <div class="input-field col s8">
+          <input name="entry.1708927651" id="entry_1708927651" type="text" class="validate">
+          <label for="entry_1708927651">How did you hear about us?</label>
+        </div>
+      </div>
+
+      <button ng-click="submitContactForm()" class="btn waves-effect waves-light">Submit
+
+        <i class="material-icons">send</i>
+      </button>
     </div>
-
-    <button ng-click="submitContactForm()" class="btn waves-effect waves-light">Submit
-
-      <i class="material-icons">send</i>
-    </button>
   </form>
   <div class="center" ng-show="contactSubmitMessage">
     <h1 class="header">Thank You!</h1>

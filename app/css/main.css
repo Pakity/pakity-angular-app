@@ -1,12 +1,12 @@
 .index-banner.banner-home {
-    background: url(../images/background1.jpg) center center fixed no-repeat;
+    background: url(../images/background1.jpg) center center no-repeat;
     background-color: #294B70;
     background-size: cover;
-    height: 800px;
+    height: 600px;
 }
 
 .site-logo {
-    height: 60px;
+    height: 50px;
     padding-left: 10px;
 }
 
@@ -15,28 +15,33 @@
 }
 
 .second-banner.banner-home {
-    background: url(../images/background2.jpg) center center fixed no-repeat;
+    background: url(../images/background2.jpg) center center no-repeat;
     background-color: #294B70;
     background-size: cover;
     height: 400px;
 }
 
 .third-banner.banner-home {
-    background: url(../images/background3.jpg) center center fixed no-repeat;
+    background: url(../images/background3.jpg) center center no-repeat;
     background-color: #294B70;
     background-size: cover;
     height: 400px;
 }
 
 .banner-footer {
-    background: url(../images/Pakity-Footer.png) center center fixed no-repeat;
+    background: url(../images/Pakity-Footer.png) center center no-repeat;
     background-color: #294B70;
     background-size: cover;
     height: 400px;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+    width: 100%;
+}
+
 .banner-about {
-    background: url(../images/group.jpg) center center fixed no-repeat;
+    background: url(../images/group.jpg) center center no-repeat;
     background-color: #294B70;
     background-size: cover;
     height: 600px;
@@ -44,6 +49,23 @@
 
 .bottom-padding {
     padding-bottom: 150px;
+}
+
+.bottom-padding-small {
+    padding-bottom: 75px;
+}
+
+.border-radius-large {
+    border-radius: 75px;
+}
+
+.box-shadow-light {
+    box-shadow: 0px 0px 22px -5px;
+}
+
+footer.page-footer {
+    margin-top: 0;
+    box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.16), 0 -2px 10px 0 rgba(0, 0, 0, 0.12)
 }
 
 input.smallInput {
